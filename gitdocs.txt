@@ -1,3 +1,8 @@
 1)Crear archivo .git
 2)Crear archivo .gitignore en la raíz del proyecto
 
+git status
+git add .
+git commit -m "mensaje"
+
+git push -u origin main
