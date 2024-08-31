@@ -69,20 +69,61 @@
   </head>
 
   <body>
+    <h1>WEB APIs</h1>
+    <h2>DOM: Document Object Model</h2>
+    <h2>BOM: Browser Object Model</h2>
+    <h2>CSSOM: CSS Object Model</h2>
+    <h2>WEB APIs</h2>
+    <ul>
+      <li>Eventos</li>
+      <li>Forms</li>
+      <li>AJAX - Fetch</li>
+      <li>History</li>
+      <li>Web Storage</li>
+      <li>Geolocation</li>
+      <li>Drag & Drop</li>
+      <li>Indexed DB</li>
+      <li>Canvas</li>
+      <li>MatchMedia</li>
+      <li>etc..</li>
+    </ul>
+
+    <br />
+    <hr />
+    <br />
+    <hr />
+    <br />
+
+    <h3>Manejo del DOM</h3>
+    <p id="que-es"></p>
+    <br />
+    <hr />
+    <br />
+
+    <nav id="menu">
+      <ul>
+        <li><a href="">Sección 1</a></li>
+        <li><a href="">Sección 2</a></li>
+        <li><a href="">Sección 3</a></li>
+        <li><a href="">Sección 4</a></li>
+        <li><a href="">Sección 5</a></li>
+      </ul>
+    </nav>
     <input type="text" name="nombre" placeholder="Nombre" />
-    <h1>DOM-2</h1>
-    <a class="link-dom"
-    href="dom.html"
-    data-id="1"
-    data-description="Document Object Model"
-    style="background-color: #f7df1e; color: #222"
-    >DOM</a>
+    <a
+      class="link-dom"
+      href="dom.html"
+      data-id="1"
+      data-description="Document Object Model"
+      style="background-color: #f7df1e; color: #222"
+      >DOM</a
+    >
     <section class="cards">
       <figure class="card">
         <img src="https://loremflickr.com/200/200/tech" alt="Tech" />
         <figcaption>Tech</figcaption>
       </figure>
-      <!-- <figure class="card">
+      <figure class="card">
         <img src="https://loremflickr.com/200/200/animals" alt="Ananimals" />
         <figcaption>Animals</figcaption>
       </figure>
@@ -93,13 +134,20 @@
       <figure class="card">
         <img src="https://loremflickr.com/200/200/arch" alt="Arch" />
         <figcaption>Arch</figcaption>
-      </figure> -->
+      </figure>
       <figure class="card">
         <img src="https://loremflickr.com/200/200/nature" alt="Nature" />
         <figcaption>Nature</figcaption>
       </figure>
     </section>
+    <template id="template-card">
+      <figure class="card">
+        <img />
+        <figcaption></figcaption>
+      </figure>
+    </template>
 
-    <script src="js/dom2.js"></script>
+    <script src="../js/dom.js"></script>
+    <script src="../js/dom2.js"></script>
   </body>
 </html>

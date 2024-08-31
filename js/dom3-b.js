@@ -26,3 +26,22 @@ console.log(location.hash);
 console.log(location.pathname);
 console.log(location.search);
 // location.reload();
+
+console.log(history);
+console.log(history.length);
+// console.log(history.back(1));
+// console.log(history.go(-1));
+// console.log(history.forward(2));
+
+console.log("*******Objeto Navegador(navigator)*******");
+console.log(navigator);
+console.log(navigator.connection);
+console.log(navigator.geolocation);
+console.log(navigator.mediaDevices);
+console.log(navigator.mimeTypes);
+console.log(navigator.onLine);
+console.log(navigator.serviceWorker);
+console.log(navigator.storage);
+console.log(navigator.usb);
+console.log(navigator.userAgent);
+
