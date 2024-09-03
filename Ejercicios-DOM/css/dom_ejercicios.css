@@ -67,7 +67,10 @@ img {
   right: 0;
   width: 100%;
   background-color: var(--second-modal-color);
-  transition: transform .3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transition: transform .3s ease,opacity 0.5s ease;
+
   /* De arriba */
   /* transform: translate(0, -100%); */
   /* De abajo */
@@ -75,11 +78,13 @@ img {
   /* De la derecha */
   /* transform: translate(100%, 0); */
   /* De la izquierda */
-  transform: translate(-100%, 0);
+  /* transform: translate(-100%, 0); */
 }
 
 .panel.is-active {
-  transform: translate(0, 0);
+  /* transform: translate(0, 0); */
+  opacity: 1;
+  visibility: visible;
 }
 
 /* .panel-btn *{
