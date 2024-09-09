@@ -5,42 +5,57 @@ let x = 0,
 
 export function moveBall(e, ball, stage) {
   const $ball = d.querySelector(ball),
-    $stage = d.querySelector(stage);
-  console.log(e.keyCode);
+    $stage = d.querySelector(stage),
+    $limitsBall = $ball.getBoundingClientRect(),
+    $limitsStage = $stage.getBoundingClientRect();
+  // console.log(e.keyCode);
+  // console.log(e.key);
+  // console.log($limitsBall,$limitsStage);
 
-  const move = (direction) => {};
-  console.log(e.key);
+  // const move = (direction) => {
+  //   $ball.style.transform = `translate(${x*10}px,${y*10}px)`;
+  // };
+
   switch (e.keyCode) {
     case 37:
       // move("left");
-      x--;
+      if($limitsBall.left > $limitsStage.left)
+        e.preventDefault();
+        x--;
       break;
     case 38:
       // move("up");
-      y--;
+      if($limitsBall.top > $limitsStage.top)
+        e.preventDefault();
+        y--;
       break;
     case 39:
       // move("right");
-      x++;
+      if($limitsBall.right < $limitsStage.right)
+        e.preventDefault();
+        x++;
       break;
     case 40:
       // move("down");
-      y++;
+      if($limitsBall.bottom < $limitsStage.bottom)
+        e.preventDefault();
+        y++;
       break;
     default:
       break;
-
-    $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
   }
+  $ball.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
 }
+
+
 export function shortcuts(e) {
-  console.log(e.type);
-  console.log(e.key);
-  console.log(e.keyCode);
-  console.log(`ctrl: ${e.ctrlKey}`);
-  console.log(`alt: ${e.altKey}`);
-  console.log(`shift: ${e.shiftKey}`);
-  console.log(e);
+  // console.log(e.type);
+  // console.log(e.key);
+  // console.log(e.keyCode);
+  // console.log(`ctrl: ${e.ctrlKey}`);
+  // console.log(`alt: ${e.altKey}`);
+  // console.log(`shift: ${e.shiftKey}`);
+  // console.log(e);
 
   if (e.key === "a" && e.altKey) {
     alert("Haz lanzado una alerta con el teclado");
