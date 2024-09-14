@@ -29,12 +29,7 @@ body {
   overflow-x: hidden;
 }
 
-img {
-  max-width: 100px;
-  height: auto;
-}
-
-/* Menú Hamburguesa */
+  height: auto;/* Menú Hamburguesa */
 .header {
   position: sticky;
   top: 0;
@@ -53,7 +48,7 @@ img {
   padding-top: 4rem;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
+  /* width: 200px; */
   max-width: var(--container-width);
   min-height: 100vh;
   text-align: center;
@@ -94,7 +89,7 @@ img {
 .panel-btn {
   position: fixed;
   z-index: 999;
-  bottom: 1vw;
+  /* bottom: 1vw; */
   right: 1vw;
   width: 4rem;
   height: 4rem;
@@ -134,9 +129,9 @@ img {
 /* Eventos del teclado */
 .stage {
   display: flex;
-  position: absolute;
-  min-height: 30vh;
-  min-width: 100vh;
+  /* position: absolute; */
+  /* min-height: 30vh; */
+  /* min-width: 100vh; */
   background-color: var(--second-color);
 }
 
@@ -170,10 +165,10 @@ img {
 .scroll-top-btn:hover {
   background-color: var(--second-color);
   color: var(--main-color);
-  transition: all 0.3s ease-out;
+  /* transition: all 0.3s ease-out; */
 }
 
 .hidden {
-  visibility: visible;
+  /* visibility: visible; */
   opacity: 0;
 }
