@@ -1,10 +1,8 @@
-/* Reset CSS */
-
+/* **********     Reset CSS     ********** */
 :root {
   --main-font: sans-serif;
   --font-size: 16px;
-  --main-color: orange;
-  /*#f7df1e;*/
+  --main-color: #f7df1e;
   --second-color: #222;
   --main-modal-color: rgba(247, 222, 30, 0.85);
   --second-modal-color: rgba(34, 34, 34, 0.85);
@@ -29,14 +27,23 @@ body {
   overflow-x: hidden;
 }
 
-img {
-  max-width: 100px;
+img,
+video {
+  max-width: 100%;
   height: auto;
 }
 
-/* Menú Hamburguesa */
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* **********     menu-hamburguesa     ********** */
+
 .header {
   position: sticky;
+  z-index: 997;
   top: 0;
   padding: 1rem;
   background-color: var(--main-color);
@@ -53,7 +60,7 @@ img {
   padding-top: 4rem;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
+  width: 100%;
   max-width: var(--container-width);
   min-height: 100vh;
   text-align: center;
@@ -67,34 +74,35 @@ img {
   left: 0;
   right: 0;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
   background-color: var(--second-modal-color);
   opacity: 0;
   visibility: hidden;
   transition: transform 0.3s ease, opacity 0.5s ease;
-
   /* De arriba */
-  /* transform: translate(0, -100%); */
+  transform: translate(0, -100%);
   /* De abajo */
-  /* transform: translate(0, 100%); */
+  transform: translate(0, 100%);
   /* De la derecha */
-  /* transform: translate(100%, 0); */
+  transform: translate(100%, 0);
   /* De la izquierda */
-  /* transform: translate(-100%, 0); */
+  transform: translate(-100%, 0);
 }
 
 .panel.is-active {
-  /* transform: translate(0, 0); */
+  transform: translate(0, 0);
   opacity: 1;
   visibility: visible;
 }
 
-/* .panel-btn *{
-
-} */
 .panel-btn {
   position: fixed;
   z-index: 999;
-  bottom: 1vw;
+  bottom: 1vh;
   right: 1vw;
   width: 4rem;
   height: 4rem;
@@ -131,12 +139,11 @@ img {
   background-color: var(--main-modal-color);
 }
 
-/* Eventos del teclado */
+/* **********     Eventos del Teclado     ********** */
+
 .stage {
   display: flex;
-  position: absolute;
-  min-height: 30vh;
-  min-width: 100vh;
+  min-height: 50vh;
   background-color: var(--second-color);
 }
 
@@ -148,8 +155,7 @@ img {
   background-color: var(--main-color);
 }
 
-/* ScrollTopButton */
-
+/* **********     ScrollTopButton     ********** */
 .scroll-top-btn {
   position: fixed;
   z-index: 999;
@@ -165,15 +171,15 @@ img {
   cursor: pointer;
   outline: 0;
   border: 0;
+  transition: all 0.3s ease-out;
 }
 
 .scroll-top-btn:hover {
   background-color: var(--second-color);
   color: var(--main-color);
-  transition: all 0.3s ease-out;
 }
 
 .hidden {
-  visibility: visible;
+  visibility: hidden;
   opacity: 0;
 }
