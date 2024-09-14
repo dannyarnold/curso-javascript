@@ -11,7 +11,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   digitalClock("#reloj", "#activar-reloj", "#desactivar-reloj");
   alarm("assets/alarma.mp3", "#activar-alarma", "#desactivar-alarma");
 
-  countdown("countdown","Aug 27, 2024 09:30:00","Feliz cumple!!! 😎");
+  countdown("countdown","Aug 27, 2025 4:30:00","Feliz cumple!!! 😎");
 });
 
 
