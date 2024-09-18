@@ -29,9 +29,15 @@ body {
   overflow-x: hidden;
 }
 
-  height: auto;/* Menú Hamburguesa */
+img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Menú Hamburguesa */
 .header {
   position: sticky;
+  z-index: 997;
   top: 0;
   padding: 1rem;
   background-color: var(--main-color);
@@ -48,7 +54,7 @@ body {
   padding-top: 4rem;
   margin-left: auto;
   margin-right: auto;
-  /* width: 200px; */
+  width: 100%;
   max-width: var(--container-width);
   min-height: 100vh;
   text-align: center;
@@ -62,23 +68,29 @@ body {
   left: 0;
   right: 0;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+
   background-color: var(--second-modal-color);
   opacity: 0;
   visibility: hidden;
   transition: transform 0.3s ease, opacity 0.5s ease;
 
   /* De arriba */
-  /* transform: translate(0, -100%); */
+  transform: translate(0, -100%);
   /* De abajo */
-  /* transform: translate(0, 100%); */
+  transform: translate(0, 100%);
   /* De la derecha */
-  /* transform: translate(100%, 0); */
+  transform: translate(100%, 0);
   /* De la izquierda */
-  /* transform: translate(-100%, 0); */
+  transform: translate(-100%, 0);
 }
 
 .panel.is-active {
-  /* transform: translate(0, 0); */
+  transform: translate(0, 0);
   opacity: 1;
   visibility: visible;
 }
@@ -89,7 +101,7 @@ body {
 .panel-btn {
   position: fixed;
   z-index: 999;
-  /* bottom: 1vw; */
+  bottom: 1vh;
   right: 1vw;
   width: 4rem;
   height: 4rem;
@@ -129,8 +141,7 @@ body {
 /* Eventos del teclado */
 .stage {
   display: flex;
-  /* position: absolute; */
-  /* min-height: 30vh; */
+  min-height: 50vh;
   /* min-width: 100vh; */
   background-color: var(--second-color);
 }
@@ -160,6 +171,7 @@ body {
   cursor: pointer;
   outline: 0;
   border: 0;
+  transition: all 0.3s ease-out;
 }
 
 .scroll-top-btn:hover {
@@ -169,6 +181,38 @@ body {
 }
 
 .hidden {
-  /* visibility: visible; */
+  visibility: hidden;
   opacity: 0;
+}
+
+/* DarkThemeButton */
+
+.dark-theme-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  left: 1vw;
+  /*calc(4.25rem + 1vw);*/
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  /* transition: all 0.3s ease-out; */
+}
+
+.dark-mode {
+  background-color: var(--second-color);
+  color: var(--main-color);
 }
