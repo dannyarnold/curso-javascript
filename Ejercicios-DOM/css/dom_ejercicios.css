@@ -192,7 +192,7 @@ img {
   z-index: 999;
   bottom: 1vh;
   left: 1vw;
-  /*calc(4.25rem + 1vw);*/
+  /* left:calc(4.25rem + 1vw); */
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
@@ -215,4 +215,46 @@ img {
 .dark-mode {
   background-color: var(--second-color);
   color: var(--main-color);
+}
+
+.online,
+.offline {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+/* Search Filters */
+.cards {
+  display: grid;
+  background-color: #b71c1c;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  transition: all 0.3s ease-out;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card figcaption {
+  padding: 1rem;
+}
+
+.filter {
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  order: 1;
 }

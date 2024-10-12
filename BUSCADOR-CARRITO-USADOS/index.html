@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Buscador de Autos Viejos</title>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+        <h1>Buscador de Autos Usados</h1>
+
+        <div class="contenedor">
+            <form class="buscador" id="buscador">
+                <input type="search" name="search" placeholder="Buscar por marca, modelo, año, precio, color" id="search">
+                <button type="submit">Buscar</button>
+            </form>
+            <h2>Resultados</h2>
+            <div id="resultado"></div>
+         </div>
+
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+</html>
