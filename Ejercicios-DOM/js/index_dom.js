@@ -10,6 +10,7 @@ import getGeolocation from './dom/geolocalizacion.js';
 import searchFilters from './dom/filtro_busquedas.js';
 
 import webCam from './dom/deteccion_webcam.js';
+import responsiveTester from './dom/prueba_responsive.js';
 
 const d = document;
 
@@ -49,6 +50,8 @@ d.addEventListener('keydown', (e) => {
 darkTheme('.dark-theme-btn', 'dark-mode');
 
 webCam('webcam');
+
+responsiveTester('responsive-tester');
 
 // d.addEventListener('keyup',e=>{
 //   // shortcuts(e);

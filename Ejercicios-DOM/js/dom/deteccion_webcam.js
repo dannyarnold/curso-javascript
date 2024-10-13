@@ -11,7 +11,14 @@ export default function webCam(id) {
             .then((stream) => {
                 console.log(stream);
                 $video.srcObject = stream;
+                $video.play();
             })
-            .catch((err) => console.log(`Sucedió el siguiente error: ${err}`));
+            .catch((err) => {
+                $video.insertAdjacentHTML(
+                    'beforebegin',
+                    `<p><mark>${err}</mark></p>`,
+                );
+                console.log(`Sucedió el siguiente error: ${err}`);
+            });
     }
 }
